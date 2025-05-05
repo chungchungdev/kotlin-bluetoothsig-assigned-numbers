@@ -1,0 +1,49 @@
+[versions]
+kotlin = "2.1.20"
+ksp = "2.1.20-1.0.32"
+# Kotlinx
+kotlinxDatetime = "0.6.2"
+kotlinxCoroutines = "1.10.2"
+kotlinxSerializationJson = "1.8.1"
+#
+kaml = "0.77.1"
+kotlinpoet = "2.1.0"
+ktor = "3.1.2"
+koin = "4.0.4"
+koinAnnotations = "2.0.0"
+# Test
+mockk = "1.14.2"
+junit4 = "4.13.2"
+
+[libraries]
+kaml = { module = "com.charleskorn.kaml:kaml", version.ref = "kaml" }
+kotlinpoet = { module = "com.squareup:kotlinpoet", version.ref = "kotlinpoet" }
+kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "kotlinxDatetime" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+# Coroutines
+kotlinx-coroutines-bom = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-bom", version.ref = "kotlinxCoroutines" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test" }
+# Ktor
+ktor-bom = { module = "io.ktor:ktor-bom", version.ref = "ktor"}
+ktor-client-core = { module = "io.ktor:ktor-client-core" }
+ktor-client-cio = { module = "io.ktor:ktor-client-cio" }
+ktor-client-contentNegotiation = { module = "io.ktor:ktor-client-content-negotiation" }
+ktor-kotlinxSerialization-json = { module = "io.ktor:ktor-serialization-kotlinx-json" }
+ktor-client-bomRemover = { module = "io.ktor:ktor-client-bom-remover", version.ref = "ktor" }
+ktor-client-resources = { module = "io.ktor:ktor-client-resources", version.ref = "ktor" }
+ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
+ktor-client-mock = { module = "io.ktor:ktor-client-mock", version.ref = "ktor" }
+# Koin
+koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koin" }
+koin-android = { module = "io.insert-koin:koin-android" }
+koin-annotations = { module = "io.insert-koin:koin-annotations", version.ref = "koinAnnotations" }
+koin-ksp-compiler = { module = "io.insert-koin:koin-ksp-compiler", version.ref = "koinAnnotations" }
+junit = { group = "junit", name = "junit", version.ref = "junit4" }
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+google-devtools-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+
